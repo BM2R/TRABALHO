@@ -1,0 +1,80 @@
+/* Reset de estilos */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: #c9cdf3;
+}
+
+/* Caixa que contém o envelope */
+.envelope-container {
+  position: relative;
+  width: 350px;
+  height: 250px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+}
+
+/* Corpo do envelope */
+.envelope {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background: #D9534F;
+  border-radius: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  overflow: hidden;
+}
+
+/* Tampa do envelope (corrigida) */
+.lid {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 50%;
+  background: #C9302C;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  clip-path: polygon(0 0, 50% 100%, 100% 0);
+  transform-origin: top center;
+  transition: transform 0.7s ease-in-out;
+}
+
+/* Frente do envelope */
+.front {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 50%;
+  background: #D9534F;
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
+}
+
+/* A carta dentro do envelope */
+.letter {
+  position: absolute;
+  bottom: 10px;
+  width: 85%;
+  height: 75%;
+  background: white;
+  padding: 14px;
+  text-align: center;
+  font-size: 16px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.7s ease-in-out;
+  transform: translateY(100%);
+}
